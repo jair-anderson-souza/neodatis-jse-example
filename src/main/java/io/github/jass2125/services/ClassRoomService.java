@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package io.github.jass2125;
+package io.github.jass2125.services;
 
+import io.github.jass2125.entity.ClassRoom;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

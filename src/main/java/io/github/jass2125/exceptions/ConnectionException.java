@@ -3,18 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package io.github.jass2125;
-
-import org.neodatis.odb.ODB;
-import org.neodatis.odb.ODBFactory;
+package io.github.jass2125.exceptions;
 
 /**
  * @author Anderson Souza <jair_anderson_bs@hotmail.com>
- * @since Mar 20, 2018 8:35:19 PM
+ * @since Mar 21, 2018 2:42:09 PM
  */
-public class Connection {
+public class ConnectionException extends RuntimeException {
 
-    public ODB getConnection() {
-        return ODBFactory.open("exemplo.neodatis", "admin", "admin");
+    public ConnectionException(Exception e, String msg) {
+        super(msg, e);
     }
+
 }
