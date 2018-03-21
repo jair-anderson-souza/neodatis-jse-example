@@ -20,7 +20,11 @@ public class ClassRoom implements Serializable {
     private List<Student> listStudents;
     private String disciplina;
 
+    public ClassRoom() {
+    }
+
     public ClassRoom(Professor professor, String discipline) {
+        this();
         this.professor = professor;
         this.disciplina = discipline;
         this.listStudents = new ArrayList<>();
