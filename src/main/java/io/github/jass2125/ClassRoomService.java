@@ -22,11 +22,9 @@ import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
 public class ClassRoomService implements Serializable {
 
     private ODB database;
-    private Connection connection;
 
-    public ClassRoomService() {
-        this.connection = new Connection();
-        this.database = connection.getConnection();
+    public ClassRoomService(ODB database) {
+        this.database = database;
     }
 
     public void persist(ClassRoom classRoom) {
