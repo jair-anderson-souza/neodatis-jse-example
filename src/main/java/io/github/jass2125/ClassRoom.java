@@ -18,7 +18,7 @@ public class ClassRoom implements Serializable {
 
     private Professor professor;
     private List<Student> listStudents;
-    private String disciplina;
+    private String discipline;
 
     public ClassRoom() {
     }
@@ -26,7 +26,7 @@ public class ClassRoom implements Serializable {
     public ClassRoom(Professor professor, String discipline) {
         this();
         this.professor = professor;
-        this.disciplina = discipline;
+        this.discipline = discipline;
         this.listStudents = new ArrayList<>();
     }
 
@@ -38,12 +38,12 @@ public class ClassRoom implements Serializable {
         this.professor = professor;
     }
 
-    public String getDisciplina() {
-        return disciplina;
+    public String getDiscipline() {
+        return discipline;
     }
 
-    public void setDisciplina(String disciplina) {
-        this.disciplina = disciplina;
+    public void setDiscipline(String discipline) {
+        this.discipline = discipline;
     }
 
     public void addStudent(Student student) {
@@ -58,7 +58,7 @@ public class ClassRoom implements Serializable {
     public int hashCode() {
         int hash = 7;
         hash = 97 * hash + Objects.hashCode(this.professor);
-        hash = 97 * hash + Objects.hashCode(this.disciplina);
+        hash = 97 * hash + Objects.hashCode(this.discipline);
         return hash;
     }
 
@@ -74,7 +74,7 @@ public class ClassRoom implements Serializable {
             return false;
         }
         final ClassRoom other = (ClassRoom) obj;
-        if (!Objects.equals(this.disciplina, other.disciplina)) {
+        if (!Objects.equals(this.discipline, other.discipline)) {
             return false;
         }
         return Objects.equals(this.professor, other.professor);
@@ -82,7 +82,7 @@ public class ClassRoom implements Serializable {
 
     @Override
     public String toString() {
-        return "Turma{" + "professor=" + professor + ", listStudents=" + listStudents + ", disciplina=" + disciplina + '}';
+        return "Turma{" + "professor=" + professor + ", listStudents=" + listStudents + ", disciplina=" + discipline + '}';
     }
 
 }
